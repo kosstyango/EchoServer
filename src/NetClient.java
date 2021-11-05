@@ -23,15 +23,15 @@ public class NetClient extends JFrame implements KeyListener {
 
 	NetClient() {
 		// Создаем окно
-		super("Simple Chat client");
-		setSize(400, 500);
+		super("Связь с массонами");
+		setSize(400, 600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		// Добавляем на окно текстовое поле
 		textArea = new JTextArea();
-		textArea.setBackground(Color.BLACK);
-		textArea.setForeground(Color.WHITE);
-		textArea.setEditable(false);
+		textArea.setBackground(Color.BLUE);
+		textArea.setForeground(Color.ORANGE);
+		textArea.setEditable(true);
 		textArea.setMargin(new Insets(10, 10, 10, 10));
 		scrollPane = new JScrollPane(textArea);
 		this.add(scrollPane);
@@ -87,7 +87,7 @@ public class NetClient extends JFrame implements KeyListener {
 		out.flush();
 		
 		System.out.print((int)(arg0.getKeyChar()));
-		addCharToTextArea(arg0.getKeyChar());
+		//addCharToTextArea(arg0.getKeyChar());
 	}
 
 	void addCharToTextArea(char c) {
