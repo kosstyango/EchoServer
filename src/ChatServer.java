@@ -24,7 +24,7 @@ public class ChatServer {
             try {
                 // ждем клиента из сети
                 Socket socket = serverSocket.accept();
-                System.out.println("Client connected!");
+                System.out.println("Client finally connected!");
                 // создаем клиента на своей стороне
                 clients.add(new Client(socket, this));
             } catch (IOException e) {

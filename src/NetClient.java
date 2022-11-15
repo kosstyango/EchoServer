@@ -84,7 +84,7 @@ public class NetClient extends JFrame implements KeyListener {
 	public void keyTyped(KeyEvent arg0) {
 		// отправляем напечатанный символ в сеть и на экран
 		out.print(arg0.getKeyChar());
-		out.flush();
+		out.flush(); //очищаем поток
 		
 		System.out.print((int)(arg0.getKeyChar()));
 		//addCharToTextArea(arg0.getKeyChar());
