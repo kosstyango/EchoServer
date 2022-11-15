@@ -3,6 +3,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Client implements Runnable {
@@ -33,7 +34,7 @@ void recieve (String message){
                 // читаем из сети и пишем в сеть
                 out.println("Welcome to chat");
                 String input = in.nextLine();
-                while (!input.equals("bye")) {
+                while (!input.toLowerCase(Locale.ROOT).equals("bye")) {
                     server.sendAll(input);
                     input = in.nextLine();
                 }
